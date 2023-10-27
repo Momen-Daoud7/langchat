@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { DarkModeToggle } from "./DarkModeToggle";
+import UserButton from "./UserButton";
 
 const Header = () => {
   return (
@@ -18,6 +19,7 @@ const Header = () => {
             {/* Darktoggole */}
             <DarkModeToggle />
             {/* userbutton */}
+            <UserButton />
         </div>
       </nav>
       {/* Upgrade banner */}
