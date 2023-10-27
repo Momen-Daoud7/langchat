@@ -21,7 +21,7 @@ const Home = () => {
         <div className="py-12 sm:py-20 lg:pb-40 text-center">
           <div className="mx-auto max-w-7xl lg:px-8">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              Chat With Anyone, anywhere!
+              Chat With Anyone, <br />anywhere!
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
               You speak your Language, they speak theirs.{" "}
@@ -32,7 +32,7 @@ const Home = () => {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/chat"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-whtie dark:text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white dark:text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Get started
               </Link>
