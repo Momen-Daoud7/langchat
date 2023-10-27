@@ -7,16 +7,16 @@ const UserAvatar = ({
   image,
   className,
 }: {
-  name: string;
-  image: string;
+  name?: string| null;
+  image?: string | null;
   className?: string;
 }) => {
   return (
     <Avatar className={cn("bg-white text-black", className)}>
       {image && (
         <Image
-          src={image}
-          alt={name}
+          src={image || ""}
+          alt={name || "user name"}
           width={40}
           height={40}
           className="rounded-full"
@@ -25,7 +25,7 @@ const UserAvatar = ({
       {/* <AvatarImage src="" /> */}
       <AvatarFallback className="dark:bg-white dark:text-black text-lg">
         {name
-          ?.split("")
+          ?.split(" ")
           .map((n) => n[0])
           .join("")}
       </AvatarFallback>
