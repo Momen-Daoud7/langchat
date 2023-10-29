@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import Header from "@/components/header/Header";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import ClientProvider from "@/providers/ClientProvider";
+import FirebaseAuthProvider from "@/providers/FirebaseAuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,15 +23,17 @@ export default function RootLayout({
     <ClientProvider>
       <html lang="en">
         <body className={inter.className}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Header />
-            {children}
-          </ThemeProvider>
+          <FirebaseAuthProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <Header />
+              {children}
+            </ThemeProvider>
+          </FirebaseAuthProvider>
         </body>
       </html>
     </ClientProvider>

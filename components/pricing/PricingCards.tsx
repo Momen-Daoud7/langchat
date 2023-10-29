@@ -2,6 +2,7 @@ import { CheckIcon } from "lucide-react";
 // import CheckoutButton from "./CheckoutButton";
 import Link from "next/link";
 import { tiers } from "@/constants";
+import CheckoutButton from "./CheckoutButton";
 
 const PricingCards = ({ redirect }: { redirect: boolean }) => {
   return (
@@ -61,7 +62,7 @@ const PricingCards = ({ redirect }: { redirect: boolean }) => {
                 Get Started Today
               </Link>
             ) : (
-              tier.id 
+              tier.id && <CheckoutButton />
             )}
           </div>
         ))}
